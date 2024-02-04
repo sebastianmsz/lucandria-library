@@ -48,21 +48,73 @@ table {
 	--system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	font-family: var(--system-ui);
 	box-sizing: border-box;
-  }
+}
+button{
+	font-family: var(--system-ui);
+	cursor: pointer;
+}
+button:hover{
+	filter: brightness(95%);
+}
+button:active{
+	filter: brightness(85%);
+}
 /*global*/
 
 /*header*/
+header{
+	display: flex;
+	justify-content: space-between;
+	padding: 20px min(300px, 8vw);
+	font-size: clamp(1.5rem, 1.1250rem + 1.6667vw, 2rem);
+	font-weight: bold;
+	align-items: center;
+	box-shadow: 0px 0px 12px -6px;
+	gap: 10px;
+}
+header button{
+	font-size: clamp(1rem, 0.8500rem + 0.6667vw, 1.2rem);
+	border: none;
+	padding: 10px;
+	border-radius: 10px;
+	cursor: pointer;
+}
 /*header*/
 
 /*main*/
-button{
-	font-family: var(--system-ui);
+main{
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+}
+main button{
+	display: block;
+	font-size: clamp(1rem, 0.6250rem + 1.6667vw, 1.5rem);
+	border-radius: 10px;
+	border: none;
+	padding: 20px;
+	background-color: hsl(0, 0%, 100%);
 }
 /*main*/
 
 /*footer*/
+footer{
+	padding: 15px 0;
+	display: flex;
+	justify-content: space-between;
+	font-size: clamp(1rem, 0.6250rem + 1.6667vw, 1.5rem);
+	justify-content:center;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
 footer a{
+	margin-left: 4px;
     color: inherit;
+}
+footer p{
+	text-align: center;
 }
 .fa-github{
     transition: transform 0.3s ease-in-out;
@@ -71,3 +123,18 @@ footer a{
     transform: rotate(360deg) scale(1.2);
 }
 /*footer*/
+
+/*mobile*/
+@media (max-width:400px) {
+	header{
+		align-items: center;
+		justify-content: center;
+		align-content: center;
+		flex-wrap: wrap;
+		gap: 20px
+	}
+	header h1{
+		text-align: center;
+	}
+}
+/*mobile*/
