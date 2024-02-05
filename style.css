@@ -83,12 +83,11 @@ header button{
 
 /*main*/
 main{
-	display: flex;
-	justify-content: center;
+	display: grid;
 	padding: 20px;
 }
-main button{
-	display: block;
+main>button{
+	margin: 0 auto;
 	font-size: clamp(1rem, 0.6250rem + 1.6667vw, 1.5rem);
 	border-radius: 10px;
 	border: none;
@@ -96,6 +95,58 @@ main button{
 	background-color: hsl(0, 0%, 100%);
 }
 /*main*/
+
+/*dialog*/
+dialog{
+	border: none;
+	border-radius: 10px;
+	padding: 40px;
+	box-shadow: 0 0 12px -4px;
+}
+dialog h2{
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+dialog input{
+	padding: 10px;
+	height: 20px;
+}
+dialog button{
+	font-size: 1rem;
+	padding: 6px;
+	width: 150px;
+	height: 50px;
+	background-color: hsl(0, 0%, 80%);
+}
+dialog form>div,
+dialog form{
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+
+}
+dialog form{
+	gap: 20px;
+}
+dialog menu{
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	margin-top: 10px;
+}
+
+.read div{
+	display: flex;
+	align-items: center;
+}
+.read>div{
+	gap: 10px;
+}
+form>div:not(.read) label::after{
+	content: '*';
+	color: red;
+}
+/*dialog*/
 
 /*footer*/
 footer{
