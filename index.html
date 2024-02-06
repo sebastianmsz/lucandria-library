@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Lucandria's library</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="script.js" defer></script>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel='stylesheet' href='style.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <script src='script.js' defer></script>
+    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'>
 </head>
 <body>
     <header>
@@ -15,43 +15,42 @@
         <button>Log in</button>
     </header>
     <main>
-        <button id="addBookBtn">
+        <button id='addBookBtn'>
             Add book
-            <i class="fa fa-plus" aria-hidden='true'></i>
+            <i class='fa fa-plus' aria-hidden='true'></i>
         </button>
-        <dialog id="dialog">
-            <form method="dialog">
+        <dialog id='dialog'>
+            <form method='dialog'>
                 <h2>Add a New Book</h2>
                 <div>
-                    <label for="bookTitle">Book Title</label>
-                    <input type="text" name='bookTitle' id='bookTitle' placeholder='Lord Of The Rings' required>
+                    <label for='bookTitle'>Book Title</label>
+                    <input type='text' name='bookTitle' id='bookTitle' placeholder='Lord Of The Rings' required>
+                </div>
+                <div>
+                    <label for='bookAuthor'>Author</label>
+                    <input type='text' name='bookAuthor' id='bookAuthor' placeholder='J. R. R. Tolkien' required>
                 </div>
 
                 <div>
-                    <label for="bookAuthor">Author</label>
-                    <input type="text" name='bookAuthor' id='bookAuthor' placeholder='J. R. R. Tolkien' required>
-                </div>
-
-                <div>
-                    <label for="bookPages">Number of Pages</label>
-                    <input type="number" name='bookPages' id='bookPages' placeholder='1137' required min='1'>
+                    <label for='bookPages'>Number of Pages</label>
+                    <input type='number' name='bookPages' id='bookPages' placeholder='1137' required min='1'>
                 </div>
                 <div class='read'>
                     <p>Have you read it?</p>
                     <div>
                         <div>
-                            <label for="read">Yes</label>
-                            <input type="radio" id='read' name='read' value='true'>
+                            <label for='read'>Yes</label>
+                            <input type='radio' id='read' name='read' value='true'>
                         </div>
                         <div>
-                            <label for="notRead">No</label>
-                            <input type="radio" id='notRead' name='read' value='false' checked>
+                            <label for='notRead'>No</label>
+                            <input type='radio' id='notRead' name='read' value='false' checked>
                         </div>
                     </div>
                 </div>
               <menu>
-                <button id="cancel" type="reset">Cancel</button>
-                <button type="submit">Confirm</button>
+                <button id='cancel' type='reset'>Cancel</button>
+                <button type='submit' id='submitBtn'>Confirm</button>
               </menu>
             </form>
           </dialog>
@@ -59,10 +58,10 @@
     <footer>
         <p>
             Copyright &copy;
-            <span id="year"></span>
+            <span id='year'></span>
             sebastianmsz
-            <a href="https://github.com/sebastianmsz" target='_blank'>
-                <i class="fa fa-github" aria-hidden='true'></i>
+            <a href='https://github.com/sebastianmsz' target='_blank'>
+                <i class='fa fa-github' aria-hidden='true'></i>
             </a>
         </p>
     </footer>
