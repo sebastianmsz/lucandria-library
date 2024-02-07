@@ -31,8 +31,11 @@ class Book {
   }
 }
 
-const submitBtn = document.querySelector('#submitBtn');
-submitBtn.addEventListener('click', addBookToLibrary);
+const form = document.querySelector('form');
+form.addEventListener('submit', ()=>{
+  addBookToLibrary()
+  updateLibrary()
+});
 
 function addBookToLibrary(){
   const bookNameInput = document.querySelector('#bookTitle').value;
@@ -43,4 +46,30 @@ function addBookToLibrary(){
   const newBook = new Book(bookNameInput, bookAuthorInput, bookPagesInput, readInput.value);
   myLibrary.push(newBook);
 }
+
+function updateLibrary(){
+  const cardContainer = document.querySelector('.card-container')
+  cardContainer.innerHTML = '';
+
+  myLibrary.forEach((book)=>{
+    const card = document.createElement('div')
+    const cardContainer = document.querySelector('.card-container')
+
+    card.innerHTML = 
+    `<div>
+      <h2>Title: </h2> <p>${book.title}</p>
+    </div>
+    <div>
+      <h2>Author: </h2> <p>${book.author}</p>
+    </div>
+    <div>
+      <h2>Pages: </h2> <p>${book.pages}</p>
+    </div>
+    <div><button>Read</button><button>Delete</button></div>`
+
+    card.classList.add("card");
+    cardContainer.appendChild(card)
+  })
+}
+
 

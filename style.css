@@ -60,6 +60,11 @@ button:hover{
 button:active{
 	filter: brightness(85%);
 }
+body{
+	position: relative;
+	min-height: calc(100vh - 50px);
+	padding-bottom: 40px;
+}
 /*global*/
 
 /*header*/
@@ -84,8 +89,16 @@ header button{
 
 /*main*/
 main{
-	display: grid;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
 	padding: 20px;
+}
+.card-container{
+	margin: 0 60px;
+	gap: 20px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 main>button{
 	margin: 0 auto;
@@ -153,6 +166,52 @@ form>div:not(.read) label::after{
 	color: red;
 }
 /*dialog*/
+
+/*card*/
+.card {
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	box-shadow: 0 0 12px -2px gray;
+	gap: 10px;
+	justify-content: space-between;
+}
+.card h2{ 
+	font-size: 1.1rem;
+	font-weight: bold;
+}
+.card button{
+	background-color: hsl(0, 100%, 75%);
+	border-radius: 10px;
+	font-size: 1.1rem;
+	border: none;
+	height: 40px;
+	color: white;
+	font-weight: 600;
+}
+.card button:first-of-type{
+	background-color: hsl(100, 50%, 70%);
+}
+.card div:last-child{
+	margin-top: 20px;
+	gap: 10px;
+	display: flex;
+}
+.card button{
+	flex: 1;
+}
+.card p{
+	background-color: hsl(0, 0%, 98%);
+	padding: 10px;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	margin-top: 6px;
+	word-break: break-all;
+	text-align: center;
+}
+/*card*/
 
 /*footer*/
 footer{
