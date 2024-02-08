@@ -29,12 +29,15 @@ class Book {
     this.pages = pages;
     this.read = read;
   }
+  changeReadStatus(){
+    this.read = !this.read;
+  }
 }
 
 const form = document.querySelector('form');
 form.addEventListener('submit', ()=>{
-  addBookToLibrary()
-  updateLibrary()
+  addBookToLibrary();
+  updateLibrary();
 });
 
 function addBookToLibrary(){
@@ -53,23 +56,36 @@ function updateLibrary(){
 
   myLibrary.forEach((book)=>{
     const card = document.createElement('div')
-    const cardContainer = document.querySelector('.card-container')
-
+    const index = myLibrary.map(e => e.title).indexOf(book.title);
     card.innerHTML = 
-    `<div>
-      <h2>Title: </h2> <p>${book.title}</p>
-    </div>
-    <div>
-      <h2>Author: </h2> <p>${book.author}</p>
-    </div>
-    <div>
-      <h2>Pages: </h2> <p>${book.pages}</p>
-    </div>
-    <div><button>Read</button><button>Delete</button></div>`
-
-    card.classList.add("card");
+    `<div><h2>Title: </h2> <p>${book.title}</p></div>
+    <div><h2>Author: </h2> <p>${book.author}</p></div>
+    <div><h2>Pages: </h2> <p>${book.pages}</p></div>
+    <div><button class='readBtn' id='num${index}'></button><button class='deleteBtn'>Delete</button></div>`
+    card.classList.add('card');
     cardContainer.appendChild(card)
+
+    if (book.read == 'false' || !book.read){
+      book.read = false;
+    } else {
+      book.read = true;
+    }
+
+    const deleteBtn = card.querySelector('.deleteBtn');
+    deleteBtn.addEventListener('click',()=>{
+      myLibrary.splice(index, 1);
+      updateLibrary();
+    })
+
+    if (book.read){
+      const readBtn = document.querySelector(`#num${index}`);
+      readBtn.classList.add('readBtnTrue')
+    }
+    const readBtn = card.querySelector('.readBtn');
+    readBtn.addEventListener('click',()=>{
+      book.changeReadStatus();
+      updateLibrary();
+      readBtn.innerHTML = '';
+    })
   })
 }
-
-

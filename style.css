@@ -95,14 +95,14 @@ main{
 	padding: 20px;
 }
 .card-container{
-	margin: 0 60px;
+	margin: 0 4vw;
 	gap: 20px;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 main>button{
 	margin: 0 auto;
-	font-size: clamp(1rem, 0.6250rem + 1.6667vw, 1.5rem);
+	font-size: clamp(1.2rem, 0.9750rem + 1.0000vw, 1.5rem);
 	border-radius: 10px;
 	border: none;
 	padding: 20px;
@@ -190,9 +190,6 @@ form>div:not(.read) label::after{
 	color: white;
 	font-weight: 600;
 }
-.card button:first-of-type{
-	background-color: hsl(100, 50%, 70%);
-}
 .card div:last-child{
 	margin-top: 20px;
 	gap: 10px;
@@ -211,7 +208,20 @@ form>div:not(.read) label::after{
 	word-break: break-all;
 	text-align: center;
 }
+.card .readBtn{
+	background-color: hsl(0, 0%, 70%);
+}
+.card .readBtn::after{
+	content: 'Not Read';
+}
+.card .readBtnTrue{
+	background-color: hsl(120, 50%, 70%);
+}
+.card .readBtnTrue::after{
+	content: 'Read';
+}
 /*card*/
+
 
 /*footer*/
 footer{
@@ -252,6 +262,14 @@ footer p{
 	}
 	header h1{
 		text-align: center;
+	}
+	.card-container{
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+	}
+	.card{
+		min-width: 200px;
 	}
 }
 /*mobile*/
