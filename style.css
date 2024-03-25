@@ -1,275 +1,348 @@
 /*css reset*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 /*css reset*/
 
 /*global*/
 :root {
-	--system-ui: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-	font-family: var(--system-ui);
-	box-sizing: border-box;
+  --system-ui: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-family: var(--system-ui);
+  box-sizing: border-box;
 }
-button{
-	font-family: var(--system-ui);
-	cursor: pointer;
-	-webkit-transition : -webkit-filter 60ms linear
+button {
+  font-family: var(--system-ui);
+  cursor: pointer;
+  transition: filter 60ms linear;
 }
-button:hover{
-	filter: brightness(95%);
+button:hover {
+  filter: brightness(95%);
 }
-button:active{
-	filter: brightness(85%);
+button:active {
+  filter: brightness(85%);
 }
-body{
-	position: relative;
-	min-height: calc(100vh - 50px);
-	padding-bottom: 40px;
+body {
+  position: relative;
+  min-height: calc(100vh - 50px);
+  padding-bottom: 40px;
 }
 /*global*/
 
 /*header*/
-header{
-	display: flex;
-	justify-content: space-between;
-	padding: 20px min(300px, 8vw);
-	font-size: clamp(1.5rem, 1.1250rem + 1.6667vw, 2rem);
-	font-weight: bold;
-	align-items: center;
-	box-shadow: 0px 0px 12px -6px;
-	gap: 10px;
-}
-header button{
-	font-size: clamp(1rem, 0.8500rem + 0.6667vw, 1.2rem);
-	border: none;
-	padding: 10px;
-	border-radius: 10px;
-	cursor: pointer;
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px min(300px, 8vw);
+  font-size: clamp(1.5rem, 1.125rem + 1.6667vw, 2rem);
+  font-weight: bold;
+  align-items: center;
+  box-shadow: 0px 0px 12px -6px;
+  gap: 10px;
 }
 /*header*/
 
 /*main*/
-main{
-	display: flex;
-	flex-direction: column;
-	gap: 40px;
-	padding: 20px;
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
 }
-.card-container{
-	margin: 0 4vw;
-	gap: 20px;
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+.card-container {
+  margin: 0 4vw;
+  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
-main>button{
-	margin: 0 auto;
-	font-size: clamp(1.2rem, 0.9750rem + 1.0000vw, 1.5rem);
-	border-radius: 10px;
-	border: none;
-	padding: 20px;
-	background-color: hsl(0, 0%, 100%);
-	font-weight: bold;
+main > button {
+  margin: 0 auto;
+  font-size: clamp(1.2rem, 0.975rem + 1vw, 1.5rem);
+  border-radius: 10px;
+  border: none;
+  padding: 20px;
+  background-color: hsl(0, 0%, 100%);
+  font-weight: bold;
 }
 /*main*/
 
 /*dialog*/
-dialog{
-	border: none;
-	border-radius: 10px;
-	padding: 40px;
-	box-shadow: 0 0 12px -4px;
+dialog {
+  border: none;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 0 12px -4px;
 }
-dialog h2{
-	font-size: 1.5rem;
-	font-weight: bold;
+dialog h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
-dialog input{
-	border: solid gray 1px;
-	border-radius: 5px;
-	padding: 10px;
-	height: 20px;
+dialog input {
+  border: solid gray 1px;
+  border-radius: 5px;
+  padding: 10px;
+  height: 20px;
 }
-dialog button{
-	font-size: 1rem;
-	padding: 6px;
-	width: 150px;
-	height: 40px;
-	background-color: hsl(0, 0%, 90%);
-	border: none;
-	border-radius: 10px;
+dialog button {
+  font-size: 1rem;
+  padding: 6px;
+  width: 150px;
+  height: 40px;
+  background-color: hsl(0, 0%, 90%);
+  border: none;
+  border-radius: 10px;
 }
-dialog form>div,
-dialog form{
-	display: flex;
-	flex-direction: column;
-	gap: 8px;
+dialog form > div,
+dialog form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+dialog form {
+  gap: 20px;
+}
+dialog menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
 
+.read div {
+  display: flex;
+  align-items: center;
 }
-dialog form{
-	gap: 20px;
+.read > div {
+  gap: 10px;
 }
-dialog menu{
-	display: flex;
-	justify-content: space-between;
-	gap: 10px;
-	margin-top: 10px;
-}
-
-.read div{
-	display: flex;
-	align-items: center;
-}
-.read>div{
-	gap: 10px;
-}
-form>div:not(.read) label::after{
-	content: '*';
-	color: red;
+form > div:not(.read) label::after {
+  content: '*';
+  color: red;
 }
 /*dialog*/
 
 /*card*/
 .card {
-	border-radius: 10px;
-	display: flex;
-	flex-direction: column;
-	padding: 20px;
-	box-shadow: 0 0 12px -2px gray;
-	gap: 10px;
-	justify-content: space-between;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 0 0 12px -2px gray;
+  gap: 10px;
+  justify-content: space-between;
 }
-.card h2{ 
-	font-size: 1.1rem;
-	font-weight: bold;
+.card h2 {
+  font-size: 1.1rem;
+  font-weight: bold;
 }
-.card button{
-	background-color: hsl(0, 100%, 75%);
-	border-radius: 10px;
-	font-size: 1.1rem;
-	border: none;
-	height: 40px;
-	color: white;
-	font-weight: 600;
+.card button {
+  background-color: hsl(0, 100%, 75%);
+  border-radius: 10px;
+  font-size: 1.1rem;
+  border: none;
+  height: 40px;
+  color: white;
+  font-weight: 600;
 }
-.card div:last-child{
-	margin-top: 20px;
-	gap: 10px;
-	display: flex;
+.card div:last-child {
+  margin-top: 20px;
+  gap: 10px;
+  display: flex;
 }
-.card button{
-	flex: 1;
+.card button {
+  flex: 1;
 }
-.card p{
-	background-color: hsl(0, 0%, 98%);
-	padding: 10px;
-	border-radius: 10px;
-	display: flex;
-	justify-content: center;
-	margin-top: 6px;
-	word-break: break-all;
-	text-align: center;
+.card p {
+  background-color: hsl(0, 0%, 98%);
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 6px;
+  word-break: break-all;
+  text-align: center;
 }
-.card .readBtn{
-	background-color: hsl(0, 0%, 70%);
+.card .readBtn {
+  background-color: hsl(0, 0%, 70%);
 }
-.card .readBtn::after{
-	content: 'Not Read';
+.card .readBtn::after {
+  content: 'Not Read';
 }
-.card .readBtnTrue{
-	background-color: hsl(120, 50%, 70%);
+.card .readBtnTrue {
+  background-color: hsl(120, 50%, 70%);
 }
-.card .readBtnTrue::after{
-	content: 'Read';
+.card .readBtnTrue::after {
+  content: 'Read';
 }
 /*card*/
 
-
 /*footer*/
-footer{
-	padding: 15px 0;
-	display: flex;
-	justify-content: space-between;
-	font-size: clamp(1rem, 0.6250rem + 1.6667vw, 1.5rem);
-	justify-content:center;
-	width: 100%;
-	position: absolute;
-	bottom: 0;
-	left: 0;
+footer {
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: clamp(1rem, 0.625rem + 1.6667vw, 1.5rem);
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
-footer a{
-	margin-left: 4px;
-    color: inherit;
+footer a {
+  margin-left: 4px;
+  color: inherit;
 }
-footer p{
-	text-align: center;
+footer p {
+  text-align: center;
 }
-.fa-github{
-	scale: 1.2;
-    transition: transform 0.3s ease-in-out;
+.fa-github {
+  scale: 1.2;
+  transition: transform 0.3s ease-in-out;
 }
-.fa-github:hover{
-    transform: rotate(360deg) scale(1.2);
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
 }
 /*footer*/
 
 /*mobile*/
-@media (max-width:400px) {
-	header{
-		align-items: center;
-		justify-content: center;
-		align-content: center;
-		flex-wrap: wrap;
-		gap: 20px
-	}
-	header h1{
-		text-align: center;
-	}
-	.card-container{
-		display: flex;
-		flex-direction: column;
-		margin: 0;
-	}
-	.card{
-		min-width: 200px;
-	}
+@media (max-width: 400px) {
+  header {
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  header h1 {
+    text-align: center;
+  }
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  .card {
+    min-width: 200px;
+  }
 }
 /*mobile*/

@@ -1,5 +1,5 @@
-# Welcome to the Library of Lucandrias 📚🐈!
-Discover the ultimate solution for organizing and managing your personal library effortlessly. The Library of Lucandrias is a user-friendly online platform designed for book enthusiasts, avid readers, and bibliophiles alike. Say goodbye to cluttered bookshelves and hello to streamlined book management!
+# Welcome to the Library of Lucandria 📚🐈!
+Discover the ultimate solution for organizing and managing your personal library effortlessly. The Library of Lucandria is a user-friendly online platform designed for book enthusiasts, avid readers, and bibliophiles alike. Say goodbye to cluttered bookshelves and hello to streamlined book management!
 
 The purpose of this project and the motivation behind its development is to enhance my skills in working with the object-oriented paradigm.
 ## Screenshot
@@ -20,7 +20,7 @@ The purpose of this project and the motivation behind its development is to enha
 3. Launch the `index.html` file in a web browser to view the page.
 
 ### Live Demo
-Experience the project live by visiting the [Lucandrias Library](https://sebastianmsz.github.io/lucandrias-library).
+Experience the project live by visiting the [Lucandria's Library](https://sebastianmsz.github.io/lucandrias-library).
 
 ## Technologies Used
 
